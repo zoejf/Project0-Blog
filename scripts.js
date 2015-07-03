@@ -1,7 +1,7 @@
 $(function() {
 
-//adding the id of new_to_do to a variable of new item
- var $newPostForm = $("#new_post"); 
+//form to create a new post
+ var $newPostForm = $("#new_post_form"); 
  
  // underscore function to compile the html template
  var postingTemplate = _.template($('#post-template').html());
@@ -26,39 +26,59 @@ Posts.prototype.save = function(){
 
 //renders new post to the page
 Posts.prototype.render = function() {
- _.each(Posts.all, function (post, index) {
-   var $note = $(postingTemplate(post));
-   $note.attr('data-index', index);
+ // _.each(Posts.all, function (post, index) {
+   var $note = $(postingTemplate(this));
+   // $note.attr('data-index', index);
    $postsSection.append($note)
-   // console.log("render works")
-   });
+   console.log("render works")
+   // });
  }
  
+//listen for a click on the submit button
+  $newPostForm.on('submit', function(event) {
+    event.preventDefault();
+
+    // create new note object from form data
+    var noteName = $('#postTitle').val();
+    var noteContent = $('#postContent').val();
+    var note = new Posts(noteName, noteContent);
+
+    // save note
+    note.save();
+
+    // render note
+    note.render();
+
+    // reset the form
+    // $newToDo[0].reset();
+    // $('#todo-name').focus();
+  });
+
    //listens to the click on the submit button
-   $newItemForm.on("submit", function(event) {
-	     event.preventDefault();
+   // $newItemForm.on("submit", function(event) {
+	  //    event.preventDefault();
 
-	     console.log('form submitted!'); //printing that the submit button was clicked
-	     console.log($('#item_name').val() ); //to do list info
-	     console.log($('#description').val() );
+	  //    console.log('form submitted!'); //printing that the submit button was clicked
+	  //    console.log($('#postTitle').val() ); //to do list info
+	  //    console.log($('#description').val() );
 	     
-	     // create new todo object from form data
-	     var toDoName = $('#item_name').val();
-	     var toDoDesc = $('#description').val();
-	     var toDoDate = $('#date').val();
-	     // var toDoData = {title: toDoName, description: toDoDesc, date: toDoDate};
+	  //    // create new todo object from form data
+	  //    var toDoName = $('#postTitle').val();
+	  //    var toDoDesc = $('#description').val();
+	  //    var toDoDate = $('#date').val();
+	  //    // var toDoData = {title: toDoName, description: toDoDesc, date: toDoDate};
 	     
-	     //this is test data pre-loaded to the HTML
-	    var note1 = new Posts("sample title", "my anonymous note");
-	    note1.save();
-	    note1.render();
+	  //    //this is test data pre-loaded to the HTML
+	  //   var note1 = new Posts("sample title", "my anonymous note");
+	  //   note1.save();
+	  //   note1.render();
 
-	     // //this is for the to do list items that newly added in
-	     var $listItems = $("#todo-list .to_do"); 
-	     $listItems.click(function (event) {
-	     event.preventDefault();
-	     $(this).addClass("done");
-	      })
+	  //    // //this is for the to do list items that newly added in
+	  //    var $listItems = $("#todo-list .to_do"); 
+	  //    $listItems.click(function (event) {
+	  //    event.preventDefault();
+	  //    $(this).addClass("done");
+	  //     })
 
-     });
+   //   });
 });
