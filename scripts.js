@@ -50,35 +50,8 @@ Posts.prototype.render = function() {
     note.render();
 
     // reset the form
-    // $newToDo[0].reset();
-    // $('#todo-name').focus();
+    $newPostForm[0].reset();
+    $('#postTitle').focus();
   });
 
-   //listens to the click on the submit button
-   // $newItemForm.on("submit", function(event) {
-	  //    event.preventDefault();
-
-	  //    console.log('form submitted!'); //printing that the submit button was clicked
-	  //    console.log($('#postTitle').val() ); //to do list info
-	  //    console.log($('#description').val() );
-	     
-	  //    // create new todo object from form data
-	  //    var toDoName = $('#postTitle').val();
-	  //    var toDoDesc = $('#description').val();
-	  //    var toDoDate = $('#date').val();
-	  //    // var toDoData = {title: toDoName, description: toDoDesc, date: toDoDate};
-	     
-	  //    //this is test data pre-loaded to the HTML
-	  //   var note1 = new Posts("sample title", "my anonymous note");
-	  //   note1.save();
-	  //   note1.render();
-
-	  //    // //this is for the to do list items that newly added in
-	  //    var $listItems = $("#todo-list .to_do"); 
-	  //    $listItems.click(function (event) {
-	  //    event.preventDefault();
-	  //    $(this).addClass("done");
-	  //     })
-
-   //   });
 });
