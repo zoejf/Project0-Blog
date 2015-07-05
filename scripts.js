@@ -33,7 +33,15 @@ Posts.prototype.render = function() {
    console.log("render works")
    // });
  }
- 
+
+
+// listen for the click on the 'Post a Note' button
+$("#newNoteButton").on('click', function() { 
+  // show form to post a new note
+  $(".form-section").toggleClass("display"); 
+}); 
+
+
 //listen for a click on the submit button
   $newPostForm.on('submit', function(event) {
     event.preventDefault();
@@ -52,6 +60,10 @@ Posts.prototype.render = function() {
     // reset the form
     $newPostForm[0].reset();
     $('#postTitle').focus();
+
+    //Form disappears from view
+    $(".form-section").toggleClass("display"); 
+    
   });
 
 });

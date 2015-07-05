@@ -8,16 +8,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 	<!-- customized styles -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <div class="container">
 	<div class="jumbotron">
 	  <h1>Kudos</h1>
-	  <p>Share anonymous messages of love, kindness, and gratitude.</p>
+	  <p>Share anonymous messages of love, kindness, and gratitude. <button type="button" id="newNoteButton" class="btn btn-primary pull-right">
+	  Post a New Note
+	</button></p>
+	
 	</div>
+	
 
-<div class="row form-section">
+<div class="row form-section display">
 	<div class="col-md-6 col-md-offset-3">
 		<form id="new_post_form">
 		  <div class="form-group">
@@ -38,17 +42,27 @@
 <br>
 <br>
 <div class="container" id="posts-section">
-<script type="text/template" id="post-template">
-<div class="row postBox">
-	<div class="col-md-10 col-md-offset-1">
+	<script type="text/template" id="post-template">
+	<div class="row postBox">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			   <h3><%=post_title%></h3>
+			   <p><%=post_content%></p>
+			  </div>
+			</div>
+		</div>
+	</script>
+	<div class="welcome">
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		   <h3><%=post_title%></h3>
-		   <p><%=post_content%></p>
+		    Basic panel example
 		  </div>
 		</div>
+
 	</div>
-</script>
+
+
 </div>
 
 
