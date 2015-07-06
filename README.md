@@ -6,6 +6,7 @@ Tools and Libraries Used:
 	- Underscore
 	- JQuery
 	- Bootstrap
+	- Google Fonts APIs
 
 
 
