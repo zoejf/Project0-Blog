@@ -3,6 +3,14 @@
     overflow: hidden;
 }
 
+.jumbotron {
+	background-image: url("http://i.imgur.com/BXkJZF3.gif");
+	background-size: cover;
+}
+
+.jumbotron p {
+	color: #298499;;
+}
 .jumbotron h1 {
 	color: #592848;
 	font-family: 'Covered By Your Grace', cursive;
@@ -10,16 +18,20 @@
 	font-size: 80;
 }
 
-
+.panel {
+	background-image: url("http://i.imgur.com/BXkJZF3.gif");
+	background-size: cover;
+	text-align: center;
+}
 h3 {
-	color: #592848;
+	color: #298499;
 	font-family: 'Covered By Your Grace', cursive;
 	font-weight: 400;
 	font-size: 50;
 }
 
 p {
-	color: #298499;
+	color: #592848;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15;
 }
