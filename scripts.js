@@ -39,6 +39,7 @@ Posts.prototype.render = function() {
 $("#newNoteButton").on('click', function() { 
   // show form to post a new note
   $(".form-section").toggleClass("display"); 
+  $('#postTitle').focus();
 }); 
 
 
@@ -63,7 +64,8 @@ $("#newNoteButton").on('click', function() {
 
     //Form disappears from view
     $(".form-section").toggleClass("display"); 
-    
+    $(".welcome").addClass("display");
+
   });
 
 });

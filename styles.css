@@ -1,3 +1,31 @@
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron {
+	color: #592848;
+	background-image: url("http://i.imgur.com/TmVduAN.jpg");
+	background-size: auto;
+}
+
+
 .display {
 	display: none;
+}
+
+#footer {
+	background-color: #eee;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: .3;
+
 }

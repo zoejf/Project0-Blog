@@ -11,64 +11,76 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+	<img id="background" src="http://i.imgur.com/lUXboCq.jpg">
+
 <div class="container">
 	<div class="jumbotron">
 	  <h1>Kudos</h1>
-	  <p>Share anonymous messages of love, kindness, and gratitude. <button type="button" id="newNoteButton" class="btn btn-primary pull-right">
-	  Post a New Note
-	</button></p>
-	
+	  <div class="row">
+	  	<div class="col-sm-10">
+	  		<p>Positivity is contagious.
+	  		<br>
+	  		Share anonymous messages of love, kindness, and gratitude.</p>
+
+	  	</div>
+	  	<div class="col-sm-2">
+	  		<button type="button" id="newNoteButton" class="btn btn-primary pull-right">
+	  			Post a New Note
+			</button>
+	  	</div>
+	  </div>
 	</div>
 	
 
 <div class="row form-section display">
-	<div class="col-md-6 col-md-offset-3">
-		<form id="new_post_form">
-		  <div class="form-group">
-		    <label for="postTitle">Title</label>
-		    <input input class="form-control" id="postTitle" placeholder="Your note's topic or title" autofocus>
-		  </div>
-		  <div class="form-group">
-		    <label for="postContent">Post</label>
-		    <input input class="form-control" id="postContent" placeholder="What is your message?" autofocus>
-		  </div>
-		  <button type="submit" class="btn btn-default">Submit</button>
-		</form>
+	<div class="panel panel-default col-md-6 col-md-offset-3">
+		<div class="panel-body">
+				<form id="new_post_form">
+				  <div class="form-group">
+				    <label for="postTitle">Title</label>
+				    <input input class="form-control" id="postTitle" placeholder="Your note's topic or title" autofocus>
+				  </div>
+				  <div class="form-group">
+				    <label for="postContent">Post</label>
+				    <input input class="form-control" id="postContent" placeholder="What is your message?" autofocus>
+				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+		</div>
 	</div>
 </div>
-
-</div>
 <br>
 <br>
 <br>
-<div class="container" id="posts-section">
-	<script type="text/template" id="post-template">
-	<div class="row postBox">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
+	<div id="posts-section">
+		<script type="text/template" id="post-template">
+		<div class="row postBox">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				   <h3><%=post_title%></h3>
+				   <p><%=post_content%></p>
+				  </div>
+				</div>
+			</div>
+		</script>
+		<div class="row welcome">
+			<div class="panel panel-default col-md-10 col-md-offset-1">
 			  <div class="panel-body">
-			   <h3><%=post_title%></h3>
-			   <p><%=post_content%></p>
+			    <h3>Welcome to Kudos!</h3>
+			    <p>There are no posts yet. Click the button above and be the first to submit a note! 
+			    	<br>
+			    	(Hint: your note's format will look just like this)
+			    </p>
 			  </div>
 			</div>
 		</div>
-	</script>
-	<div class="welcome">
-		<div class="panel panel-default">
-		  <div class="panel-body">
-		    Basic panel example
-		  </div>
-		</div>
-
 	</div>
 
-
+ <!-- end of container -->
 </div>
-
-
-
-</div>
-	<!-- jquery cdn -->
+	 
+	 	<!-- jquery cdn -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<!-- underscore cdn -->
