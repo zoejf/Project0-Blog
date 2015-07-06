@@ -3,12 +3,31 @@
     overflow: hidden;
 }
 
-.jumbotron {
+.jumbotron h1 {
 	color: #592848;
-	background-image: url("http://i.imgur.com/TmVduAN.jpg");
-	background-size: auto;
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: 400;
+	font-size: 80;
 }
 
+.jumbotron {
+	background-image: url("http://i.imgur.com/TmVduAN.jpg");
+	background-size: cover;
+}
+
+
+h3 {
+	color: #592848;
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: 400;
+	font-size: 50;
+}
+
+p {
+	color: #298499;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15;
+}
 
 .display {
 	display: none;
